@@ -3,9 +3,11 @@ import React from "react";
 import { Divider } from "./Divider";
 
 export const List = ({ label, children, ...props }: any) => (
-    <div className="w-1/2 flex flex-col gap-5" {...props}>
-        <h1 className="text-2xl font-bold">{label}</h1>
+    <div className="flex flex-col" {...props}>
+        <h1 className="text-2xl font-bold mb-6">{label}</h1>
         <Divider />
+
+        <br />
 
         {children}
     </div>

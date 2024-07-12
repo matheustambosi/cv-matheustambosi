@@ -6,6 +6,10 @@
     color: white;
 }
 
+.bg-sidebar {
+    background: #191414;
+}
+
 .bg-fundo {
     background: rgb(25, 20, 20);
     background: linear-gradient(0deg, #191414 75%, #5a5a5a 100%);
@@ -22,7 +26,6 @@
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

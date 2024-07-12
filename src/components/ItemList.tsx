@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 export const ItemList = ({ src, alt, label, sublabel, period, children, ...props }: any) => (
-    <div className="flex gap-6 mt-4" {...props}>
+    <div className="flex gap-6 mt-4 mb-8" {...props}>
         <div className="w-1/6">
             <Image alt={alt} src={src}></Image>
         </div>
