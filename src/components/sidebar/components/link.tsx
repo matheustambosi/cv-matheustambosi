@@ -1,6 +1,11 @@
 import { usePathname, useRouter } from "next/navigation";
 
-export const Link = ({ text, route }: any) => {
+interface LinkProps {
+  text: string;
+  route: string;
+}
+
+export const Link = ({ text, route }: LinkProps) => {
   const router = useRouter();
   const pathname = usePathname();
 

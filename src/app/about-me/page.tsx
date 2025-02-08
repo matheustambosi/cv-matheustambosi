@@ -1,6 +1,6 @@
 "use client";
 
-import { getTexts } from "@/data/data";
+import { getTexts } from "@/domain/data/data";
 import { useLanguage } from "@/providers/language-provider";
 import { usePathname } from "next/navigation";
 

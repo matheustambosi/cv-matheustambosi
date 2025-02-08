@@ -1,4 +1,4 @@
-type TextKeys = "aboutMe" | "experience" | "projects";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 const texts: Record<string, Record<string, any>> = {
   en: {

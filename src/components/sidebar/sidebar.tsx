@@ -2,7 +2,7 @@ import { Link } from "./components/link";
 import { LanguageSwitcher } from "./components/language-switcher";
 import Image from "next/image";
 import { useLanguage } from "@/providers/language-provider";
-import { getTexts } from "@/data/data";
+import { getTexts } from "@/domain/data/data";
 
 export const getRoutes = (lang: string, page: string) => {
   const { aboutMe, experience, projects } = getTexts(lang, page);

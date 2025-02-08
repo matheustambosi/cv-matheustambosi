@@ -2,7 +2,8 @@
 import { useLanguage } from "@/providers/language-provider";
 import { Project } from "./components/project";
 import { usePathname } from "next/navigation";
-import { getTexts } from "@/data/data";
+import { getTexts } from "@/domain/data/data";
+import { ProjectType } from "@/domain/types/project";
 
 export default function Projects() {
   const { lang } = useLanguage();
@@ -15,7 +16,7 @@ export default function Projects() {
       <h1 className="text-white text-md font-bold mb-4">{label}</h1>
 
       <div className="flex flex-col gap-4 min-h-[510px] overflow-y-auto pr-4">
-        {projects.map((project: any) => (
+        {projects.map((project: ProjectType) => (
           <Project key={project.name} {...project} />
         ))}
       </div>

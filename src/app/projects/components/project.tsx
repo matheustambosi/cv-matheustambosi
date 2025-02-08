@@ -1,6 +1,7 @@
+import { ProjectType } from "@/domain/types/project";
 import Image from "next/image";
 
-export const Project = ({ name, description, image }: any) => {
+export const Project = ({ name, description, image }: ProjectType) => {
   return (
     <div className="relative w-full p-4 text-white">
       <div className="h-20 flex gap-4 overflow-hidden">
