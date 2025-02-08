@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { AppProvider } from "@/providers/app-provider";
 
 export const metadata: Metadata = {
-  title: "Matheus Tambosi"
+  title: "Portfolio",
 };
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "600", "700", "900"],
+  variable: "--font-poppins",
+});
 
 export default function RootLayout({
   children,
@@ -15,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className + ' h-screen w-screen'}>{children}</body>
+      <body className={poppins.variable}>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }
