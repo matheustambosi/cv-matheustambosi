@@ -8,7 +8,7 @@ export const getRoutes = (lang: string, page: string) => {
   const { aboutMe, experience, projects } = getTexts(lang, page);
   return [
     { text: aboutMe, route: "/about-me" },
-    { text: experience, route: "/experience" },
+    { text: experience, route: "/experiences" },
     { text: projects, route: "/projects" },
   ];
 };

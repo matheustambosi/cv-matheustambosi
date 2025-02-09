@@ -8,7 +8,7 @@ const texts: Record<string, Record<string, any>> = {
     },
     sidebar: {
       aboutMe: "About Me",
-      experience: "Experience",
+      experience: "Experiences",
       projects: "Projects",
     },
     "/about-me": {
@@ -31,6 +31,9 @@ const texts: Record<string, Record<string, any>> = {
         },
       ],
     },
+    "/experiences": {
+      label: "Experiences",
+    },
   },
   pt: {
     "my-info": {
@@ -39,7 +42,7 @@ const texts: Record<string, Record<string, any>> = {
     },
     sidebar: {
       aboutMe: "Sobre Mim",
-      experience: "Experiência",
+      experience: "Experiências",
       projects: "Projetos",
     },
     "/about-me": {
@@ -61,6 +64,9 @@ const texts: Record<string, Record<string, any>> = {
           image: "/atletigo.png",
         },
       ],
+    },
+    "/experiences": {
+      label: "Experiências",
     },
   },
 };

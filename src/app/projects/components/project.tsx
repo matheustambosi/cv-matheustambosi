@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Project = ({ name, description, image }: ProjectType) => {
   return (
-    <div className="relative w-full p-4 text-white">
+    <div className="relative w-full p-4 text-white cursor-pointer">
       <div className="h-20 flex gap-4 overflow-hidden">
         <div className="w-20 h-20 rounded-md border border-opacity-20 border-white">
           <Image
