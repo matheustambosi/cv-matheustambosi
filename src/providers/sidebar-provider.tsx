@@ -9,7 +9,7 @@ export const SidebarProvider = ({ children }: { children: ReactNode }) => {
     <ContainerWrapper>
       <Sidebar />
 
-      <div className="w-full">{children}</div>
+      <div className="w-full relative overflow-y-auto">{children}</div>
     </ContainerWrapper>
   );
 };

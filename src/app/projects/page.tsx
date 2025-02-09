@@ -15,7 +15,7 @@ export default function Projects() {
     <div className="relative py-4 pl-4 w-full z-10">
       <h1 className="text-white text-md font-bold mb-4">{label}</h1>
 
-      <div className="flex flex-col gap-4 min-h-[510px] max-h-[510px] overflow-y-auto pr-4">
+      <div className="flex flex-col gap-4 min-h-[395px] max-h-[395px] lg:min-h-[510px] lg:max-h-[510px] overflow-y-auto pr-4">
         {projects.map((project: ProjectType) => (
           <Project key={project.name} {...project} />
         ))}

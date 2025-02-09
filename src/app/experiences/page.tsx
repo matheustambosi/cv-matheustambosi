@@ -15,9 +15,7 @@ export default function Experience() {
     <div className="relative py-4 pl-4 w-full z-10">
       <h1 className="text-white text-md font-semibold mb-4">{label}</h1>
 
-      <div className="min-h-[510px] max-h-[510px] overflow-y-auto">
-        <Timeline />
-      </div>
+      <Timeline />
     </div>
   );
 }

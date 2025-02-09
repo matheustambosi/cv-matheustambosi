@@ -23,8 +23,8 @@ export const Period = ({
         <div
           className={`absolute ${
             direction === "left"
-              ? "left-0 border-l-[2px]"
-              : "right-0 border-r-[2px]"
+              ? "left-0 border-l-[2px] rounded-l-lg"
+              : "right-0 border-r-[2px] rounded-r-lg"
           } bottom-0 border-opacity-20 border-white border-t-[2px] border-b-[2px] w-[76px] border-dotted ${size} rotate-180`}
         >
           <div
