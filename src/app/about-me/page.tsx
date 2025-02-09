@@ -11,8 +11,10 @@ export default function AboutMe() {
   const { label } = getTexts(lang, pathname);
 
   return (
-    <div className="relative py-4 px-6 w-full z-10">
-      <h1 className="text-white text-md font-semibold mb-4">{label}</h1>
+    <div className="relative py-4 pl-4 w-full z-10">
+      <h1 className="text-white text-md lg:text-lg font-semibold mb-4">
+        {label}
+      </h1>
     </div>
   );
 }

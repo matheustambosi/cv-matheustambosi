@@ -1,15 +1,19 @@
 import { ReactNode, useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 
-const useVanillaTilt = (tiltRef: React.RefObject<HTMLDivElement>) => {
+export const useVanillaTilt = (
+  tiltRef: React.RefObject<HTMLDivElement>,
+  max: number = 2,
+  glare: boolean = true
+) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         if (tiltRef.current) {
           VanillaTilt.init(tiltRef.current, {
-            max: 2,
+            max,
             speed: 200,
-            glare: true,
+            glare,
             "max-glare": 0.2,
           });
         }
@@ -47,7 +51,7 @@ const useVanillaTilt = (tiltRef: React.RefObject<HTMLDivElement>) => {
         ).vanillaTilt.destroy();
       }
     };
-  }, [tiltRef]);
+  }, [tiltRef, glare, max]);
 };
 
 export const ContainerWrapper = ({ children }: { children: ReactNode }) => {
@@ -58,9 +62,9 @@ export const ContainerWrapper = ({ children }: { children: ReactNode }) => {
     <div
       ref={tiltRef}
       id="vanilla-tilt"
-      className="flex flex-col lg:flex-row relative w-[80%] lg:w-[55%] h-[600px] rounded-xl font-primary"
+      className="flex flex-col lg:flex-row relative w-full lg:w-[55%] lg:h-[600px] overflow-y-auto lg:rounded-xl font-primary"
     >
-      <div className="absolute inset-0 bg-white bg-opacity-5 shadow-lg backdrop-blur-[5px] rounded-xl border-t-[3px] border-l-[3px] border-white border-opacity-20"></div>
+      <div className="absolute inset-0 bg-white bg-opacity-5 shadow-lg backdrop-blur-[5px] lg:rounded-xl border-t-[3px] border-l-[3px] border-white border-opacity-20"></div>
       {children}
     </div>
   );

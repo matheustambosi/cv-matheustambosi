@@ -35,25 +35,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  min-height: 100vh;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #e02b1a;
-  clip-path: circle(30% at 90% 20%);
-}
+@media (min-width: 1024px) {
+  body {
+    @apply bg-cover bg-bottom;
+    background-image: url("/background.jpg");
+    background-size: 110%;
 
-body::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #327ee0;
-  clip-path: circle(20% at 25% 100%);
-  z-index: -100;
+    min-height: 100vh;
+  }
 }
