@@ -15,12 +15,19 @@ const texts: Record<string, Record<string, any>> = {
       role: "Software Engineer",
     },
     sidebar: {
-      aboutMe: "About Me",
-      experience: "Experiences",
+      aboutMe: "Bio",
+      experience: "Journey",
       projects: "Labs",
     },
-    "/about-me": {
-      label: "About Me",
+    "/bio": {
+      label: "Bio",
+      descriptions: [
+        "Hey there! I am Matheus Tambosi, a Brazilian currently exploring life in Auckland, New Zealand.",
+        "I am 23 years old and have been working in the IT field for almost five years now.",
+        "My passion for technology started early, influenced by video games, and over the years, I have gained experience in software development, especially in the fintech sector.",
+        "I enjoy turning ideas into real-world solutions, from backend logic to user-friendly interfaces.",
+        "When I am not in front of my computer, you can probably find me exploring nature or planning my next project—whether it's tech-related or something completely different!",
+      ],
     },
     "/labs": {
       label: "Labs",
@@ -92,7 +99,7 @@ const texts: Record<string, Record<string, any>> = {
       ],
     },
     "/experiences": {
-      label: "Experiences",
+      label: "Journey",
     },
   },
   pt: {
@@ -101,12 +108,19 @@ const texts: Record<string, Record<string, any>> = {
       role: "Engenheiro de Software",
     },
     sidebar: {
-      aboutMe: "Sobre Mim",
-      experience: "Experiências",
+      aboutMe: "Bio",
+      experience: "Jornada",
       projects: "Labs",
     },
-    "/about-me": {
+    "/bio": {
       label: "Sobre Mim",
+      descriptions: [
+        "Olá! Eu sou Matheus Tambosi, um brasileiro explorando a vida em Auckland, Nova Zelândia.",
+        "Tenho 23 anos e trabalho na área de TI há quase cinco anos.",
+        "Minha paixão pela tecnologia começou cedo, influenciada pelos videogames, e ao longo dos anos adquiri experiência em desenvolvimento de software, especialmente no setor de fintechs.",
+        "Gosto de transformar ideias em soluções reais, desde a lógica do backend até interfaces intuitivas para os usuários.",
+        "Quando não estou na frente do computador, provavelmente estou explorando a natureza ou planejando meu próximo projeto—seja algo relacionado à tecnologia ou algo completamente diferente!",
+      ],
     },
     "/labs": {
       label: "Labs",
@@ -178,7 +192,7 @@ const texts: Record<string, Record<string, any>> = {
       ],
     },
     "/experiences": {
-      label: "Experiências",
+      label: "Jornada",
     },
   },
 };

@@ -1,26 +1,12 @@
 "use client";
 
-import { LanguageSwitcher } from "./components/language-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { getTexts } from "@/domain/data/data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { MenuItem } from "./components/link";
-import Link from "next/link";
-
-export const getRoutes = (lang: string, page: string) => {
-  const { aboutMe, experience, projects } = getTexts(lang, page);
-  return [
-    { text: aboutMe, route: "/about-me" },
-    { text: experience, route: "/experiences" },
-    { text: projects, route: "/labs" },
-  ];
-};
+import { Menu } from "./components/menu";
 
 export const Sidebar = () => {
   const { lang } = useLanguage();
 
-  const routes = getRoutes(lang, "sidebar");
   const { name, role } = getTexts(lang, "my-info");
 
   return (
@@ -34,7 +20,7 @@ export const Sidebar = () => {
         }}
       ></div>
 
-      <div className="relative flex flex-col gap-4 z-10 pt-4 lg:py-8 overflow-hidden duration-500 lg:h-full">
+      <div className="relative flex flex-col gap-4 z-10 pt-4 lg:py-8 shadow-lg duration-500 lg:h-full">
         <div className="flex flex-row lg:flex-col justify-center gap-4">
           <div className="text-white text-center">
             <h1 className="text-sm lg:text-md font-semibold">{name}</h1>
@@ -42,31 +28,7 @@ export const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex lg:flex-col items-center lg:items-stretch justify-evenly lg:justify-between h-full border-t border-white border-opacity-20 lg:border-0">
-          <Link href="/" className="lg:hidden">
-            <FontAwesomeIcon
-              width={16}
-              height={16}
-              icon={faHome}
-              className="text-white rounded-full"
-            />
-          </Link>
-
-          <div className="text-md text-white text-center flex items-center text-nowrap lg:flex-col lg:mt-4 relative">
-            {routes &&
-              routes.map((route) => (
-                <MenuItem
-                  key={route.text}
-                  text={route.text}
-                  route={route.route}
-                />
-              ))}
-          </div>
-
-          <div className="lg:px-8 lg:py-3">
-            <LanguageSwitcher />
-          </div>
-        </div>
+        <Menu />
       </div>
     </div>
   );
